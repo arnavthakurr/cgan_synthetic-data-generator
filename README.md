@@ -1,116 +1,89 @@
-# Synthetic Financial Transaction Data Generator using Conditional GAN
+# Synthetic Financial Transaction Data Generator Using Conditional GAN
 
 ## Overview
-This project aims to generate realistic synthetic financial transaction data using a Conditional Generative Adversarial Network (CGAN).  
-The goal is to address data privacy and data scarcity issues in fraud detection systems.
-
-Synthetic data allows machine learning models to be trained without exposing real user financial information.
-
----
+This project generates synthetic financial transaction data with a Conditional GAN (CGAN) built in PyTorch. The goal is to support fraud detection experiments without exposing real user transaction records.
 
 ## Problem Statement
-Fraud detection systems require large volumes of transaction data.  
-However, real financial datasets are:
-- Highly sensitive
-- Difficult to share due to privacy laws
-- Imbalanced (very few fraud cases)
+Fraud detection datasets are difficult to share because they are sensitive, highly imbalanced, and often restricted by privacy rules. This project explores whether a CGAN can learn fraud-related patterns well enough to produce useful synthetic samples for downstream modeling and analysis.
 
-This project generates synthetic transaction data that mimics real-world fraud patterns.
-
----
-
-## Project Objectives
-- Preprocess real-world fraud dataset (IEEE-CIS Fraud Detection)
-- Build a Conditional GAN using PyTorch
-- Generate synthetic fraud and non-fraud transactions
-- Prepare pipeline for training and evaluation
-
----
-
-## Current Project Status
-Phase 1: Data preprocessing completed  
-Phase 2: GAN architecture and training pipeline setup completed  
-Next Phase: Model training and evaluation
-
----
+## Features
+- Preprocesses the IEEE-CIS fraud detection dataset
+- Trains a conditional GAN on fraud and non-fraud labels
+- Saves generator and discriminator checkpoints locally
+- Produces synthetic transaction samples for evaluation
+- Visualizes real vs synthetic feature distributions
 
 ## Dataset
-We use the **IEEE-CIS Fraud Detection Dataset** from Kaggle.
+This project uses the IEEE-CIS Fraud Detection dataset from Kaggle:
 
-Due to GitHub file size limits and privacy considerations, datasets are not included in this repository.
-
-Download dataset from:
 https://www.kaggle.com/competitions/ieee-fraud-detection
 
-Required files:
-- train_transaction.csv
-- train_identity.csv
+Place these files in the project root before preprocessing:
+- `train_transaction.csv`
+- `train_identity.csv`
 
----
+Large datasets and generated CSV outputs are excluded from GitHub.
 
 ## Project Structure
-
-cgan_synthetic_data_generator/
-│
-├── data_preprocessing.py # Dataset cleaning and feature scaling
-├── gan_model.py # Generator and Discriminator architecture
-├── train.py # Training pipeline setup
-├── .gitignore
-└── README.md
-
-
-
----
+```text
+cgan_synthetic-data-generator/
+|-- data_preprocessing.py
+|-- gan_model.py
+|-- train.py
+|-- evaluate.py
+|-- fraud_classifier.py
+|-- README.md
+`-- .gitignore
+```
 
 ## Tech Stack
-
-**Language**
 - Python
-
-**Libraries**
 - Pandas
 - NumPy
 - Scikit-learn
 - PyTorch
+- Matplotlib
+- Seaborn
 
-**Concepts**
-- Data preprocessing
-- Feature scaling
-- Deep Learning
-- Generative Adversarial Networks (GAN)
-- Conditional GAN (CGAN)
-- Fraud Detection
+## Setup
+1. Clone the repository.
+2. Create and activate a virtual environment.
+3. Install dependencies:
 
----
+```bash
+pip install pandas numpy scikit-learn torch matplotlib seaborn
+```
 
-## Setup Instructions
+4. Run preprocessing:
 
-### 1. Clone Repository
+```bash
+python data_preprocessing.py
+```
 
-### 2. Create Virtual Environment
+5. Train the CGAN:
 
-### 3. Install Dependencies
+```bash
+python train.py
+```
 
-### 4. Run Data Preprocessing
-Place dataset files in project folder and run:
+6. Compare real and synthetic distributions:
 
-### 5. Run Training Pipeline
+```bash
+python evaluate.py
+```
 
+## Outputs
+- `processed_data.csv` after preprocessing
+- `generator.pth` and `discriminator.pth` after training
+- `synthetic_transactions.csv` after synthetic data generation
 
----
+These outputs are generated locally and are ignored in Git for cleaner version control.
 
 ## Future Work
-- Implement full GAN training loop
-- Evaluate synthetic data quality
-- Build Streamlit dashboard
-- Compare real vs synthetic fraud detection performance
+- Improve GAN stability and evaluation metrics
+- Add quantitative quality checks for synthetic data
+- Train fraud classifiers on real vs synthetic data
+- Build a simple demo or dashboard for results
 
----
-## Authors
-
-***Surya***
-Project – Synthetic Data Generation for Fraud Detection
-
-
-
-
+## Author
+Arnav Singh Tomar
