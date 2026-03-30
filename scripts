@@ -1,0 +1,15 @@
+Activate virtual environment:
+
+venv\Scripts\activate
+
+pip install pandas numpy scikit-learn torch matplotlib seaborn
+
+
+python data_preprocessing.py
+
+python train.py
+python train.py
+
+
+
+
