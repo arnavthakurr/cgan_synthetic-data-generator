@@ -49,3 +49,68 @@ Required files:
 ---
 
 ## Project Structure
+
+cgan_synthetic_data_generator/
+│
+├── data_preprocessing.py # Dataset cleaning and feature scaling
+├── gan_model.py # Generator and Discriminator architecture
+├── train.py # Training pipeline setup
+├── .gitignore
+└── README.md
+
+
+
+---
+
+## Tech Stack
+
+**Language**
+- Python
+
+**Libraries**
+- Pandas
+- NumPy
+- Scikit-learn
+- PyTorch
+
+**Concepts**
+- Data preprocessing
+- Feature scaling
+- Deep Learning
+- Generative Adversarial Networks (GAN)
+- Conditional GAN (CGAN)
+- Fraud Detection
+
+---
+
+## Setup Instructions
+
+### 1. Clone Repository
+
+### 2. Create Virtual Environment
+
+### 3. Install Dependencies
+
+### 4. Run Data Preprocessing
+Place dataset files in project folder and run:
+
+### 5. Run Training Pipeline
+
+
+---
+
+## Future Work
+- Implement full GAN training loop
+- Evaluate synthetic data quality
+- Build Streamlit dashboard
+- Compare real vs synthetic fraud detection performance
+
+---
+## Authors
+
+***Surya***
+Project – Synthetic Data Generation for Fraud Detection
+
+
+
+
