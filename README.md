@@ -32,6 +32,8 @@ cgan_synthetic-data-generator/
 |-- train.py
 |-- evaluate.py
 |-- fraud_classifier.py
+|-- streamlit_app.py
+|-- requirements.txt
 |-- README.md
 `-- .gitignore
 ```
@@ -72,6 +74,12 @@ python train.py
 python evaluate.py
 ```
 
+7. Launch the Streamlit app:
+
+```bash
+streamlit run streamlit_app.py
+```
+
 ## Outputs
 - `processed_data.csv` after preprocessing
 - `generator.pth` and `discriminator.pth` after training
@@ -88,6 +96,14 @@ These outputs are generated locally and are ignored in Git for cleaner version c
 - Add quantitative quality checks for synthetic data
 - Train fraud classifiers on real vs synthetic data
 - Build a simple demo or dashboard for results
+
+## Streamlit Deployment
+This repository can be deployed on Streamlit Community Cloud using:
+- Repository: this GitHub repo
+- Branch: `main`
+- Main file path: `streamlit_app.py`
+
+Once deployed, upload `processed_data.csv` and `synthetic_transactions.csv` from the app sidebar to explore your results.
 
 ## Author
 Arnav Singh Tomar
