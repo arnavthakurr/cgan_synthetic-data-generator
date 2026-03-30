@@ -51,7 +51,7 @@ cgan_synthetic-data-generator/
 3. Install dependencies:
 
 ```bash
-pip install pandas numpy scikit-learn torch matplotlib seaborn
+pip install -r requirements.txt
 ```
 
 4. Run preprocessing:
@@ -78,6 +78,10 @@ python evaluate.py
 - `synthetic_transactions.csv` after synthetic data generation
 
 These outputs are generated locally and are ignored in Git for cleaner version control.
+
+## Notes
+- The raw Kaggle dataset files are required locally and are not included in this repository.
+- Model checkpoints and generated CSV files stay on your machine and are excluded from Git tracking.
 
 ## Future Work
 - Improve GAN stability and evaluation metrics
