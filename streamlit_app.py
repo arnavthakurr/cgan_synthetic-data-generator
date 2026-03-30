@@ -205,7 +205,7 @@ def render_distribution_plot(real_df, synthetic_df, feature):
     ax.set_ylabel("Density")
     ax.grid(alpha=0.18)
     ax.legend(frameon=False)
-    st.pyplot(fig, clear_figure=True, use_container_width=True)
+    st.pyplot(fig, clear_figure=True)
 
 
 def build_drift_df(real_df, synthetic_df, numeric_features):
