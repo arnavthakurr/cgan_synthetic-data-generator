@@ -28,8 +28,8 @@ loader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
 data_dim = data.shape[1]
 
 # Models
-G = Generator().to(device)
-D = Discriminator().to(device)
+G = Generator(data_dim=data_dim, latent_dim=latent_dim).to(device)
+D = Discriminator(data_dim=data_dim).to(device)
 
 # Loss and optimizers
 criterion = nn.BCELoss()
