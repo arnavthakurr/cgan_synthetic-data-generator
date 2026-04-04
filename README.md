@@ -4,9 +4,7 @@
 This project generates synthetic financial transaction data with a Conditional GAN (CGAN) built in PyTorch. The goal is to support fraud detection experiments without exposing real user transaction records.
 
 ## Live Application
-Streamlit demo:
-
-https://cgan-synthetic-data-generation.streamlit.app
+[![Open Live App](https://img.shields.io/badge/Open-Live_App-0f766e?style=for-the-badge&logo=streamlit&logoColor=white)](https://cgan-synthetic-data-generation.streamlit.app)
 
 ## Problem Statement
 Fraud detection datasets are difficult to share because they are sensitive, highly imbalanced, and often restricted by privacy rules. This project explores whether a CGAN can learn fraud-related patterns well enough to produce useful synthetic samples for downstream modeling and analysis.
